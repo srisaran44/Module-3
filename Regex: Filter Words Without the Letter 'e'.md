@@ -15,6 +15,24 @@ To write a Python program that filters out and returns all elements from a list 
 
 ## 🧾 Program
 Add code here
+import re
+
+# Function to filter words without 'e'
+def filter_without_e(words):
+    # Regex: ^[^eE]*$ → matches strings with no 'e' or 'E'
+    pattern = re.compile(r'^[^eE]*$')
+    return [word for word in words if pattern.match(word)]
+
+# Driver code
+words_list = ["apple", "banana", "grape", "kiwi", "mango", "fig", "plum"]
+result = filter_without_e(words_list)
+
+print("Original list:", words_list)
+print("Filtered list (no 'e'):", result)
+
+
 ## Output
+<img width="1110" height="734" alt="image" src="https://github.com/user-attachments/assets/b3263694-6c8a-4eb7-8005-235de1c9e540" />
+
 
 ## Result
